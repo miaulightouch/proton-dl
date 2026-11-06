@@ -1,6 +1,6 @@
 # Proton-DL
 
-Galgame-focused improvements to [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos), including DLsite Nest support.
+Galgame-focused improvements to [Proton-CachyOS](https://github.com/CachyOS/proton-cachyos).
 
 > [!WARNING]
 > # it's experimental AI slop!
