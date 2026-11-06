@@ -2,19 +2,19 @@
 
 ## Project shorthands
 
-- `%pjsync`: fetch the latest published release from `upstream`, create or reuse the corresponding upstream branch with `cachyos` replaced by `dl`, merge the release tag, and check, migrate or fix the DLsite Nest patches. Run the relevant builds and tests.
+- `%pjsync`: fetch the latest published release from `upstream`, create or reuse the corresponding upstream branch with `cachyos` replaced by `dl`, merge the release tag, and check, migrate or fix the Proton-DL patches. Run the relevant builds and tests.
 
 ## Project scope
 
 - Read `README.md` and the relevant source and patches before continuing work. Consult ignored `local/` records when needed for builds or verification.
-- Maintain one DLsite Nest-focused Proton-CachyOS fork for implementations and modifications. Keep `wine/` as the clean upstream CachyOS submodule; manage Wine implementations, modifications and tests through `patches/wine/`.
+- Maintain one galgame-focused Proton-CachyOS fork for implementations and modifications, including DLsite Nest support. Keep `wine/` as the clean upstream CachyOS submodule; manage Wine implementations, modifications and tests through `patches/wine/`.
 - Use upstream source layout, style, tests and Proton SDK build rules. Apply each Wine patch once to the build copy.
 - Organize patches by feature, including its fixes and regression tests; update the feature patch instead of appending patches that record successive revisions.
 - Before adding a game- or process-specific workaround, read the affected project's and component's quirk guidelines and follow their existing application detection and quirk mechanisms. Keep such exceptions scoped to the affected application; fix general defects in the shared implementation.
 - Put build output and test prefixes under `build/`. Keep local runtime state, diagnostics, source archives, installers and build records under ignored `local/`; do not commit these files or expose their contents.
-- Limit changes to the requested DLsite Nest implementation or modification and necessary build/test integration; leave unrelated upstream code alone.
+- Limit changes to the requested galgame or DLsite Nest implementation or modification and necessary build/test integration; leave unrelated upstream code alone.
 - Keep a brief feature list in `README.md`. Document only implemented behavior, limitations and fork-specific requirements; omit generic Proton environment configuration and internal technical details. Keep build/test records under ignored `local/` and omit work history from public documentation. Do not put implementation status or test results in `AGENTS.md`.
-- Distinguish automated regression tests from manual verification with DLsite Nest; claim support only within the verified scope.
+- Distinguish automated regression tests from manual verification with the affected game or DLsite Nest; claim support only within the verified scope.
 - Keep the original project remote as `upstream` and the personal fork as `origin`. Push fork changes to `origin`; do not push them to `upstream`.
 - Do not push upstream tags to `origin`; they can trigger the release workflow.
 - Name branches by replacing `cachyos` in the corresponding upstream names with `dl`.
